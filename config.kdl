@@ -1,0 +1,17 @@
+keybinds {
+    normal {
+      bind "Ctrl g" { SwitchToMode "locked"; }
+      bind "Alt h" { MoveFocus "left"; }
+      bind "Alt l" { MoveFocus "right"; }
+      bind "Alt j" { MoveFocus "down"; }
+      bind "Alt k" { MoveFocus "up"; }
+      bind "Ctrl s" { ToggleFloatingPanes; }
+      bind "Ctrl q" { Quit; }
+    }
+    locked {
+      bind "Ctrl g" { SwitchToMode "normal"; }
+    }
+}
+
+theme "catppuccin-mocha"
+default_layout "dev-layout"
