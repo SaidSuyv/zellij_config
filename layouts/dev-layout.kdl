@@ -1,46 +1,13 @@
 layout {
-  default_tab_template {
+  tab_template name="env_tab" {
     pane size=1 borderless=true {
       plugin location="zellij:tab-bar"
     }
-    children
-    pane size=2 borderless=true {
-      plugin location="zellij:status-bar"
-    }
-  }
-  tab_template name="strider_tab" {
-    pane size=1 borderless=true {
-      plugin location="zellij:tab-bar"
-    }
-    pane split_direction="Vertical" {
-      pane size="20%" {
-        plugin location="zellij:strider"
-      }
+    pane split_direction="Horizontal" {
       children
     }
     pane size=2 borderless=true {
       plugin location="zellij:status-bar"
-    }
-  }
-  strider_tab name="Test" cwd="~/dev/composer/laravel" focus=true {
-    pane edit="./arlet-backend/bootstrap/app.php"
-  }
-  tab name="Backend" {
-    pane name="Backend Pane" {
-      command "echo"
-      args "Pene de Backend"
-    }
-  }
-  tab name="Frontend" {
-    pane name="Frontend Pane" {
-      command "echo"
-      args "Pane de Frontend"
-    }
-  }
-  tab name="Code" {
-    pane name="Code Pane" {
-      command "echo"
-      args "Pene de Code"
     }
   }
 }

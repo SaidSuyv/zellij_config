@@ -6,6 +6,7 @@ keybinds {
       bind "Alt j" { MoveFocus "down"; }
       bind "Alt k" { MoveFocus "up"; }
       bind "Ctrl s" { ToggleFloatingPanes; }
+      bind "Alt f" { ToggleFocusFullscreen; }
       bind "Ctrl q" { Quit; }
     }
     locked {

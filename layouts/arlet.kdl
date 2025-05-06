@@ -1,0 +1,42 @@
+layout {
+  tab_template name="env_tab" {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    pane split_direction="Horizontal" {
+      children
+    }
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  env_tab name="Backend" cwd="~/dev/composer/laravel/arlet-backend" {
+    pane {
+      name "Main";
+      command "vim";
+      args ".";
+    }
+
+    pane {
+      size "25%";
+      name "Serve";
+      command "php";
+      args "artisan" "serve";
+    }
+  }
+
+  env_tab name="Frontend" cwd="~/dev/node/react/arlet" {
+    pane {
+      name "Main";
+      command "vim";
+      args ".";
+    }
+    pane {
+      size "25%";
+      name "Serve";
+      command "npm";
+      args "run" "dev";
+    }
+  }
+}
